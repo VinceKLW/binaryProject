@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 80px 0 0; /* Top padding to make space for the fixed header */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,21 +14,40 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    display: block;
-}
-
-.optionsAgain{
     display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: right;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
 }
 
 .binary-input {
     width: 200px;
     padding: 5px;
+    margin-top: 10px;
+    text-align: center; /* Align text inside input to the right */
+    justify-self: flex-end; /* Align input box to the right */
+}
+
+.optionsAgain{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+input {
+    width: 200px;
+    padding: 5px;
     margin-bottom: 10px;
 }
+
 
 button {
     padding: 5px 34px;
@@ -43,4 +62,23 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.header {
+    background-color: #007bff; 
+    display: flex;
+    justify-content: space-between; /* Push elements to start and end of container */
+    color: #fff; 
+    text-align: center; 
+    padding: 5px;
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0; 
+    padding: 10px; 
+    font-size: 30px;
 }
