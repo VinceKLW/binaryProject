@@ -11,6 +11,7 @@ function add() {
     let decimal2 = parseInt(binary2, 2);
     let result = (decimal1 + decimal2).toString(2);
     document.getElementById('result').value = result;
+    isBinary = true;
 }
 
 function subtract() {
@@ -24,9 +25,8 @@ function subtract() {
     let decimal2 = parseInt(binary2, 2);
     let result = (decimal1 - decimal2).toString(2);
     document.getElementById('result').value = result;
+    isBinary = true;
 }
-
-// TODO: fix multiply and divide functions
 
 function multiply() {
     let binary1 = document.getElementById('binary1').value;
@@ -39,6 +39,7 @@ function multiply() {
     let decimal2 = parseInt(binary2, 2);
     let result = (decimal1 * decimal2).toString(2);
     document.getElementById('result').value = result;
+    isBinary = true;
 }
 
 function divide() {
@@ -61,6 +62,7 @@ function divide() {
     let result = (decimal1 / decimal2).toString(2);
 
     document.getElementById('result').value = result;
+    isBinary = true;
 }
 
 
@@ -69,13 +71,10 @@ function convert() {
     let value = inputElement.value;
 
     if (isBinary) {
-        // Convert from binary to decimal
         let decimal = parseInt(value, 2);
-        // Update the input element with decimal or error message if binary was invalid
         inputElement.value = isNaN(decimal) ? 'Invalid binary number' : decimal;
-    } else {
-        // Convert from decimal to binary
-        // Ensure that the input is a valid decimal number
+    } 
+    else {
         let decimal = parseInt(value, 10);
         if (isNaN(decimal)) {
             inputElement.value = 'Invalid decimal number';
@@ -84,6 +83,15 @@ function convert() {
         }
     }
     isBinary = !isBinary;
+}
+
+function clear(){
+    document.getElementById('result').value = 0;
+
+    document.getElementById('binary1').value = '';
+    document.getElementById('binary2').value = '';
+
+    isBinary = true;
 }
 
 function isValidBinary(binary) {
