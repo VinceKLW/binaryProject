@@ -85,13 +85,12 @@ function convert() {
     isBinary = !isBinary;
 }
 
-function clear(){
-    document.getElementById('result').value = 0;
-
-    document.getElementById('binary1').value = '';
-    document.getElementById('binary2').value = '';
-
-    isBinary = true;
+function clearResultBox(){
+    document.getElementById('result').value = "";
+    document.getElementById('binary1').value = "";
+    document.getElementById('binary2').value = "";
+    
+    isBinary = true; 
 }
 
 function isValidBinary(binary) {
