@@ -49,4 +49,3 @@ Thank you for trying out our Binary Calculator. We hope you find it useful and i
 ---
 
 Happy calculating! 🎉
-```
