@@ -3,37 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Binary Calculator</title>
+<title>BASED Calculator</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header">
-        <h1>Binary Calculator</h1>
+        <h1>BASED Calculator</h1>
         <h1>Github</h1>
     </div>
 
 <div class="calculator">
-    <label for="binary1">Binary 1:</label>
-    <input type="text" id="binary1" class="binary-input" placeholder="Enter binary number">
-    <br>
-    <label for="binary2">Binary 2:</label>
-    <input type="text" id="binary2" class="binary-input" placeholder="Enter binary number">
-    <br>
-    <div class="optionsAgain">
-        <div class="options">
-            <button onclick="add()">Add</button>
-            <hr>
-            <button onclick="subtract()">Subtract</button>
-            <hr>
-            <button onclick="divide()">Divide</button>
-            <hr>
-            <button onclick="multiply()">Multiply</button>
-            <hr>
-            <button onclick="convert()">Convert</button>
-            <hr>
-            <button onclick="clearResultBox()">Clear</button>
-        </div>
+    <h1>BASED Calculator</h1>
+    <div class="inputContainer">
+        <label for="binary1"></label>
+        <input type="text" id="binary1" class="binary-input" placeholder="Enter a number">
+        <div class="SquareContainer">
+            <div class="dropdown SquareContainer">
+                <div class="select">
+                    <span class="selected">+</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li onclick="add()" class="active">+</li>
+                    <li onclick="sub()" >-</li>
+                    <li onclick="multiply()">*</li>
+                    <li onclick="divide()">/</li>
+                    <li onclick="convert()">convert</li>
+                </ul>
+            </div>
     </div>
+        <label for="binary2"></label>
+        <input type="text" id="binary2" class="binary-input" placeholder="Enter a number">
+    </div>
+    <div class="container">
+        <div class="dropdown">
+            <div class="select">
+                <span class="selected">Convert From</span>
+                <div class="caret"></div>
+            </div>
+            <ul class="menu">
+                <li class="active">2</li>
+                <li>4</li>
+                <li>8</li>
+                <li>10</li>
+                <li>16</li>
+            </ul>
+        </div>
+        <h1 class="arrow">➜</h1>
+        <div class="dropdown">
+            <div class="select">
+                <span class="selected">Convert To</span>
+                <div class="caret"></div>
+            </div>
+            <ul class="menu">
+                <li class="active">2</li>
+                <li>4</li>
+                <li>8</li>
+                <li>10</li>
+                <li>16</li>
+            </ul>
+        </div>
+</div>
+    <div class="container">
+        <div class="dropdown">
+            <div class="select">
+                <span class="selected">+</span>
+                <div class="caret"></div>
+            </div>
+            <ul class="menu">
+                <li onclick="add()" class="active">+</li>
+                <li onclick="sub()" >-</li>
+                <li onclick="multiply()">*</li>
+                <li onclick="divide()">/</li>
+                <li onclick="convert()">convert</li>
+            </ul>
+        </div>
+</div>
+
     <br>
     <label for="result">Result:</label>
     <input type="text" class="binary-input" id="result" readonly>
