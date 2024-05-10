@@ -4,6 +4,9 @@ Welcome to our Binary Calculator project! This tool is designed to perform arith
 Created by Vincent Wong and Shams Haroon, this calculator is perfect for students, educators,
 and computing enthusiasts interested in exploring the binary number system.
 
+Click here to test!
+https://vinceklw.github.io/binaryProject/
+
 # Features 🌟
 
 - Addition: Add two binary numbers.
